@@ -9,24 +9,25 @@ em.not-italic {
 }
 
 /* --- Logo text styling --- */
-.logo-text,
-.logo-text-dark {
+.logo-text {
 	font-size: 1.1rem;
 	font-weight: 700;
 	letter-spacing: 2px;
 	white-space: nowrap;
-}
-
-.logo-text {
-	color: #fff;
-}
-
-.logo-text-dark {
-	color: #333;
-}
-
-#logo a {
 	text-decoration: none;
+	color: #333;
+	display: none;
+}
+
+@media (min-width: 992px) {
+	.logo-text {
+		display: block;
+	}
+}
+
+/* Bianco su header trasparente (hero, desktop) */
+.is-expanded-menu #header.transparent-header:not(.sticky-header) .logo-text {
+	color: #fff;
 }
 
 /* --- Transparent header colors (white on hero, desktop only) --- */
