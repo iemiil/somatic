@@ -5,8 +5,9 @@ Sito web one-page bilingue (IT/EN) per Davide Grazioli, Counselor Professionale,
 
 ## Stack Tecnologico
 - **Template**: Canvas 7 (basato su Bootstrap 5, con framework JS proprietario)
-- **Server**: `python -m http.server 8080` dalla root del progetto (necessario - il JS di Canvas non funziona da `file://`)
+- **Server locale**: `python -m http.server 8080` oppure VS Code Live Server (necessario per font Google e JS Canvas)
 - **Nessun build step**: HTML/CSS/JS puri
+- **Repo GitHub**: https://github.com/iemiil/somatic.git
 
 ## Struttura del Progetto
 ```
@@ -19,19 +20,24 @@ js/plugins.min.js   # Plugin Canvas (include jQuery)
 js/functions.bundle.js  # JS framework Canvas
 images/             # Tutte le immagini (incluse quelle del cliente)
 include/            # Include server-side di Canvas (gestione form)
+css/fonts.css       # Override font (Poppins, Lato, PT Serif) come demo Canvas
 ```
 
 ## File da Modificare
 - `index.html` - contenuti, struttura, testi bilingui
 - `css/custom.css` - tutte le personalizzazioni visive
+- `css/fonts.css` - font del sito (copiato dal demo online Canvas)
 
 ## Regole Canvas 7 (IMPORTANTE)
 1. **Mai usare la classe `one-page-menu`** sui container del menu - rompe il rendering del menu
 2. **Mai usare `<span>` dentro `.menu-link`** - Canvas li nasconde (usare `<em class="not-italic">`)
 3. **Header trasparente** richiede la struttura completa Swiper slider con classe `include-header`
 4. **Testo menu bianco sull'hero**: va limitato a `.is-expanded-menu` per non rompere il dropdown mobile
-5. **Partire sempre da file template funzionanti** quando si aggiungono nuove pagine - mai costruire da zero
-6. **Mai mischiare strutture di template diversi** - duplicare un file funzionante e modificarlo. In questo progetto l'utente aveva solo richiesto un sito one-page; la scelta di combinare `index-onepage.html` e `index-classic.html` è stata un'interpretazione dell'assistente che ha causato la maggior parte dei problemi di debug. L'approccio corretto era partire da `index-classic.html` (che funzionava) e adattarlo per la navigazione one-page
+5. **Tag `<em>` nel menu ereditano il font secondario** di Canvas (`em { font-family: secondary-font }`). Serve `font-family: inherit` su `em.not-italic` nel custom.css
+6. **Logo testuale**: Canvas gestisce il toggle logo-default/logo-dark via JS solo per `<img>`. Per logo testo, usare un singolo elemento con colore gestito via CSS (bianco su transparent-header, scuro su sticky). Nascosto su mobile perché il titolo hero è sufficiente
+7. **Canvas non ha sistema multilingua** integrato — solo un esempio UI (`menu-with-lang-switcher.html`) senza logica. Il sistema `data-lang-*` con JS custom è necessario
+8. **Partire sempre da file template funzionanti** quando si aggiungono nuove pagine - mai costruire da zero
+9. **Mai mischiare strutture di template diversi** - duplicare un file funzionante e modificarlo. In questo progetto l'utente aveva solo richiesto un sito one-page; la scelta di combinare `index-onepage.html` e `index-classic.html` è stata un'interpretazione dell'assistente che ha causato la maggior parte dei problemi di debug. L'approccio corretto era partire da `index-classic.html` (che funzionava) e adattarlo per la navigazione one-page
 
 ## Sistema Bilingue
 - Attributi `data-lang-it` / `data-lang-en` sugli elementi
