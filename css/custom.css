@@ -3,7 +3,10 @@
 -----------------------------------------------------------------*/
 
 /* --- Menu lang tags (em instead of span to avoid Canvas span hiding) --- */
-em.not-italic { font-style: normal; }
+em.not-italic {
+	font-style: normal;
+	font-family: inherit;
+}
 
 /* --- Logo text styling --- */
 .logo-text,
