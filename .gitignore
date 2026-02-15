@@ -1,0 +1,10 @@
+# Temp files
+~$*
+*.tmp
+Thumbs.db
+.DS_Store
+
+# Canvas template extras (copied for debug, not needed)
+demos/
+dist/
+one-page/

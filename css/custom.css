@@ -1,0 +1,194 @@
+/* ----------------------------------------------------------------
+	Custom CSS - Davide Grazioli Studio
+-----------------------------------------------------------------*/
+
+/* --- Menu lang tags (em instead of span to avoid Canvas span hiding) --- */
+em.not-italic { font-style: normal; }
+
+/* --- Logo text styling --- */
+.logo-text,
+.logo-text-dark {
+	font-size: 1.1rem;
+	font-weight: 700;
+	letter-spacing: 2px;
+	white-space: nowrap;
+}
+
+.logo-text {
+	color: #fff;
+}
+
+.logo-text-dark {
+	color: #333;
+}
+
+#logo a {
+	text-decoration: none;
+}
+
+/* --- Transparent header colors (white on hero, desktop only) --- */
+.is-expanded-menu #header.transparent-header:not(.sticky-header) {
+	--cnvs-primary-menu-color: #fff;
+	--cnvs-header-misc-icons-color: #fff;
+}
+
+/* --- Language Switcher --- */
+.lang-switcher a {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	border: 1px solid currentColor;
+	text-decoration: none;
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 1px;
+	transition: all 0.3s;
+	opacity: 0.7;
+}
+
+.lang-switcher a:hover {
+	opacity: 1;
+}
+
+/* --- Hero --- */
+#slider {
+	background-color: #1a1a1a;
+}
+
+.hero-title {
+	font-size: 2.8rem;
+}
+
+/* --- Percorsi Section --- */
+.section-percorsi {
+	padding: 100px 0;
+}
+
+.percorsi-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('../images/sfondo-percorsi.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.percorsi-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.6);
+}
+
+.card-percorso {
+	border: none;
+	border-radius: 12px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-percorso:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.card-percorso.card-dark {
+	background-color: #2a7d6f;
+}
+
+.card-percorso.card-light {
+	background-color: #f0f5f4;
+	color: #2a4a44;
+}
+
+.card-percorso.card-light .card-title {
+	color: #2a4a44;
+}
+
+.card-percorso.card-light .card-subtitle {
+	color: #5a8a80;
+}
+
+.card-percorso.card-light .card-text {
+	color: #4a6a64;
+}
+
+/* --- Chi Sono Section --- */
+#section-chi-sono {
+	background-color: #fff;
+}
+
+#section-chi-sono p {
+	line-height: 1.8;
+	color: #555;
+}
+
+#section-chi-sono img {
+	box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+}
+
+/* --- Contatti Section --- */
+.section-contatti {
+	background-color: #f8f9fa;
+}
+
+.section-contatti a {
+	color: #2a7d6f;
+}
+
+.section-contatti a:hover {
+	color: #1d5a4f;
+}
+
+/* --- Footer --- */
+#footer {
+	padding: 0;
+}
+
+#footer #copyrights {
+	padding: 25px 0;
+	background-color: #1a1a1a;
+	border-top: none;
+}
+
+#footer #copyrights a {
+	color: rgba(255,255,255,0.6);
+}
+
+#footer #copyrights a:hover {
+	color: #fff;
+}
+
+/* --- Responsive --- */
+@media (max-width: 991.98px) {
+	.hero-title {
+		font-size: 2rem;
+	}
+
+	.section-percorsi {
+		padding: 60px 0;
+	}
+
+	/* Foto sopra testo su mobile */
+	#section-chi-sono .col-lg-5 {
+		order: -1;
+		margin-bottom: 30px;
+	}
+
+	/* Fix parallax su mobile (non supportato su iOS) */
+	.percorsi-bg {
+		background-attachment: scroll;
+	}
+}
+
+@media (max-width: 575.98px) {
+	.hero-title {
+		font-size: 1.5rem;
+	}
+}
