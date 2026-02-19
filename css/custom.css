@@ -62,6 +62,14 @@ em.not-italic {
 	background-color: #1a1a1a;
 }
 
+.slider-caption .button {
+	width: auto !important;
+	display: inline-block !important;
+	align-self: center;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
 .hero-title {
 	font-size: 2.8rem;
 }
@@ -137,29 +145,33 @@ em.not-italic {
 }
 
 .card-percorso.card-dark {
-	background-color: #2a7d6f;
+	background-color: #3d6b35;
 }
 
 .card-percorso.card-light {
-	background-color: #f0f5f4;
-	color: #2a4a44;
+	background-color: #f0f5f0;
+	color: #2a4a27;
 }
 
 .card-percorso.card-light .card-title {
-	color: #2a4a44;
+	color: #2a4a27;
 }
 
 .card-percorso.card-light .card-subtitle {
-	color: #5a8a80;
+	color: #5a8a50;
 }
 
 .card-percorso.card-light .card-text {
-	color: #4a6a64;
+	color: #4a6a44;
 }
 
 /* --- Chi Sono Section --- */
 #section-chi-sono {
 	background-color: #fff;
+}
+
+#section-chi-sono h2 {
+	color: #3d6b35;
 }
 
 #section-chi-sono p {
@@ -176,12 +188,16 @@ em.not-italic {
 	background-color: #f8f9fa;
 }
 
+.section-contatti h2 {
+	color: #3d6b35;
+}
+
 .section-contatti a {
-	color: #2a7d6f;
+	color: #3d6b35;
 }
 
 .section-contatti a:hover {
-	color: #1d5a4f;
+	color: #2a4a25;
 }
 
 /* --- Footer --- */
@@ -206,7 +222,7 @@ em.not-italic {
 /* --- Responsive --- */
 @media (max-width: 991.98px) {
 	.hero-title {
-		font-size: 2rem;
+		font-size: 2.4rem;
 	}
 
 	.section-percorsi {
@@ -227,6 +243,6 @@ em.not-italic {
 
 @media (max-width: 575.98px) {
 	.hero-title {
-		font-size: 1.5rem;
+		font-size: 2rem;
 	}
 }
