@@ -180,8 +180,15 @@ em.not-italic {
 	margin-bottom: 0.5rem;
 }
 
+#section-chi-sono .col-lg-5 {
+	display: flex;
+}
+
 #section-chi-sono img {
 	box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+	height: 100%;
+	object-fit: cover;
+	object-position: top;
 }
 
 /* --- Contatti Section --- */
