@@ -2,6 +2,12 @@
 	Custom CSS - Davide Grazioli Studio - v2
 -----------------------------------------------------------------*/
 
+/* --- Override colore primario Canvas con verde brand Grazioli --- */
+:root {
+	--cnvs-themecolor: #3d6b35;
+	--cnvs-themecolor-rgb: 61, 107, 53;
+}
+
 /* --- Menu lang tags (em instead of span to avoid Canvas span hiding) --- */
 em.not-italic {
 	font-style: normal;
@@ -106,12 +112,6 @@ em.not-italic {
 	font-size: 0.9rem;
 	line-height: 1.7;
 	padding: 16px 0 8px;
-}
-
-/* --- Percorsi: forza bianco sul titolo (Canvas dark sovrascrive text-white sugli span) --- */
-#section-percorsi .heading-block h2,
-#section-percorsi .heading-block h2 span {
-	color: #fff !important;
 }
 
 /* --- Percorsi Section --- */
