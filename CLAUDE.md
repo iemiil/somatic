@@ -55,7 +55,14 @@ include/            # Include server-side di Canvas (gestione form)
 ## Colori
 - **Verde foresta** (brand Grazioli): `#3d6b35`
 - **Verde hover**: `#2a4a25`
-- Usato su: titoli Chi Sono e Contatti, link sezione contatti
+- Il colore primario di Canvas si cambia tramite variabili CSS in `custom.css` — NON modificando file singoli:
+  ```css
+  :root {
+    --cnvs-themecolor: #3d6b35;
+    --cnvs-themecolor-rgb: 61, 107, 53;
+  }
+  ```
+- Documentazione ufficiale: https://docs.semicolonweb.com/docs/getting-started/color-schemes/
 
 ## Immagini del Cliente
 - `images/sfondo-home.jpg` - Sfondo hero
