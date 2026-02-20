@@ -108,6 +108,12 @@ em.not-italic {
 	padding: 16px 0 8px;
 }
 
+/* --- Percorsi: forza bianco sul titolo (Canvas dark sovrascrive text-white sugli span) --- */
+#section-percorsi .heading-block h2,
+#section-percorsi .heading-block h2 span {
+	color: #fff !important;
+}
+
 /* --- Percorsi Section --- */
 .section-percorsi {
 	padding: 100px 0;
