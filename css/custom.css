@@ -2,10 +2,13 @@
 	Custom CSS - Davide Grazioli Studio - v2
 -----------------------------------------------------------------*/
 
-/* --- Override colore primario Canvas con verde brand Grazioli --- */
+/* --- Override variabili Canvas (colore e font) --- */
 :root {
 	--cnvs-themecolor: #3d6b35;
 	--cnvs-themecolor-rgb: 61, 107, 53;
+	--cnvs-body-font: 'Lato', sans-serif;
+	--cnvs-primary-font: 'Poppins', sans-serif;
+	--cnvs-secondary-font: 'PT Serif', serif;
 }
 
 /* --- Menu lang tags (em instead of span to avoid Canvas span hiding) --- */
