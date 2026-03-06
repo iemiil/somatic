@@ -20,7 +20,6 @@ em.not-italic {
 /* --- Logo text styling --- */
 .logo-text {
 	font-size: 1.1rem;
-	font-weight: 700;
 	letter-spacing: 2px;
 	white-space: nowrap;
 	text-decoration: none;
@@ -80,7 +79,7 @@ em.not-italic {
 }
 
 .hero-title {
-	font-size: 2.8rem;
+	font-size: 2rem;
 }
 
 /* --- Accordion Percorsi (su sfondo foto scuro) --- */
