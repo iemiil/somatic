@@ -11,15 +11,77 @@
 	--cnvs-secondary-font: 'PT Serif', serif;
 }
 
+/* Aumento leggero dimensione font globale */
+html {
+	font-size: 16.5px;
+}
+
+body {
+	font-size: 1.05rem;
+}
+
 /* --- Menu lang tags (em instead of span to avoid Canvas span hiding) --- */
 em.not-italic {
 	font-style: normal;
 	font-family: inherit;
 }
 
+/* --- Center navbar menu --- */
+/* Mobile: hamburger e lingua a destra */
+@media (max-width: 991.98px) {
+	.header-misc {
+		margin-left: auto;
+	}
+
+	.primary-menu-trigger {
+		margin-left: 10px;
+	}
+
+	/* Sticky header su mobile */
+	#header {
+		position: fixed !important;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 299;
+	}
+
+	/* Aggiungi padding al body per compensare l'header fisso */
+	#slider {
+		padding-top: 70px;
+	}
+}
+
+/* Desktop: menu centrato */
+@media (min-width: 992px) {
+	#header .header-row {
+		justify-content: center;
+	}
+
+	#primary-menu-trigger {
+		display: none;
+	}
+
+	.primary-menu > ul {
+		margin: 0 auto;
+		float: none;
+	}
+
+	.primary-menu {
+		position: static;
+		width: auto;
+	}
+
+	/* Rimuovi linea separatrice negli elementi header */
+	.header-misc-icon::before,
+	.header-misc-icon::after {
+		display: none !important;
+	}
+}
+
 /* --- Logo text styling --- */
 .logo-text {
-	font-size: 1.1rem;
+	font-size: 0.9rem;
 	letter-spacing: 2px;
 	white-space: nowrap;
 	text-decoration: none;
@@ -79,7 +141,34 @@ em.not-italic {
 }
 
 .hero-title {
-	font-size: 2rem;
+	font-size: 2rem !important;
+}
+
+@media (min-width: 992px) {
+	.hero-title {
+		font-size: 3.5rem !important;
+	}
+}
+
+/* Citazione Rumi: su mobile resta nel flusso normale, su desktop va sotto */
+.rumi-quote {
+	margin-top: 4rem;
+}
+
+@media (min-width: 992px) {
+	.slider-inner {
+		position: relative;
+	}
+
+	.rumi-quote {
+		position: absolute;
+		bottom: 80px;
+		left: 0;
+		right: 0;
+		text-align: center;
+		margin: 0 auto;
+		z-index: 10;
+	}
 }
 
 /* --- Accordion Percorsi (su sfondo foto scuro) --- */
@@ -186,10 +275,15 @@ em.not-italic {
 	line-height: 1.7;
 	color: #555;
 	margin-bottom: 0.5rem;
+	text-align: justify;
 }
 
 #section-chi-sono .col-lg-5 {
 	display: flex;
+}
+
+#section-chi-sono .col-lg-7 {
+	padding-right: 4rem;
 }
 
 #section-chi-sono img {
