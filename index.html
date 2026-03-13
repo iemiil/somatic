@@ -104,7 +104,7 @@
 								</div>
 							</div>
 							<div class="swiper-slide-bg" style="background-image: url('images/sfondo-home.jpg');"></div>
-							<div class="bg-overlay-bg dark" style="opacity:0.3;"></div>
+							<div class="bg-overlay-bg dark" style="opacity:0.03;"></div>
 						</div>
 					</div>
 				</div>
@@ -133,7 +133,7 @@
 						</div>
 
 						<div class="row justify-content-center">
-							<div class="col-lg-7 col-md-10">
+							<div class="col-lg-7 col-md-10" style="padding-top: 5rem;">
 
 								<div class="accordion accordion-percorsi" data-collapsible="true">
 
@@ -380,6 +380,16 @@
 	<!-- JavaScripts -->
 	<script src="js/plugins.min.js"></script>
 	<script src="js/functions.bundle.js"></script>
+
+	<!-- Chiude tutti gli accordion percorsi al caricamento -->
+	<script>
+	window.addEventListener('load', function() {
+		var headers = document.querySelectorAll('.accordion-percorsi .accordion-header');
+		var contents = document.querySelectorAll('.accordion-percorsi .accordion-content');
+		headers.forEach(function(h) { h.classList.remove('accordion-active'); });
+		contents.forEach(function(c) { c.style.display = 'none'; });
+	});
+	</script>
 
 	<!-- Language Toggle & Custom Scripts -->
 	<script>
