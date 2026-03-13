@@ -13,11 +13,22 @@
 
 /* Aumento leggero dimensione font globale */
 html {
-	font-size: 16.5px;
+	font-size: 17px;
 }
 
 body {
-	font-size: 1.05rem;
+	font-size: 1.1rem;
+}
+
+/* Aumento font su mobile */
+@media (max-width: 991.98px) {
+	html {
+		font-size: 18px;
+	}
+
+	body {
+		font-size: 1.15rem;
+	}
 }
 
 /* --- Menu lang tags (em instead of span to avoid Canvas span hiding) --- */
@@ -153,6 +164,13 @@ em.not-italic {
 /* Citazione Rumi: su mobile resta nel flusso normale, su desktop va sotto */
 .rumi-quote {
 	margin-top: 4rem;
+}
+
+/* Sottotitolo e citazione hero: più grandi su mobile */
+@media (max-width: 767.98px) {
+	.slider-caption p {
+		font-size: 1rem !important;
+	}
 }
 
 @media (min-width: 992px) {
