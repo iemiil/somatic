@@ -381,6 +381,16 @@
 	<script src="js/plugins.min.js"></script>
 	<script src="js/functions.bundle.js"></script>
 
+	<!-- Chiudi tutti gli accordion percorsi al caricamento -->
+	<script>
+	window.addEventListener('load', function() {
+		setTimeout(function() {
+			var activeHeader = document.querySelector('.accordion-percorsi .accordion-header.active');
+			if (activeHeader) activeHeader.click();
+		}, 300);
+	});
+	</script>
+
 	<!-- Language Toggle & Custom Scripts -->
 	<script>
 	(function() {
