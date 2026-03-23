@@ -9,6 +9,11 @@
 	--cnvs-body-font: 'Lato', sans-serif;
 	--cnvs-primary-font: 'Poppins', sans-serif;
 	--cnvs-secondary-font: 'PT Serif', serif;
+	--cnvs-primary-menu-hover-color: var(--cnvs-primary-menu-color);
+}
+
+.menu-item:hover > .menu-link {
+	color: inherit !important;
 }
 
 /* Aumento leggero dimensione font globale */
@@ -227,6 +232,16 @@ em.not-italic {
 /* --- Percorsi Section --- */
 .section-percorsi {
 	padding: 100px 0;
+}
+
+/* Titolo PERCORSI: bianco su mobile, verde su desktop */
+#section-percorsi .heading-block h2,
+#section-percorsi .heading-block h2 span {
+	color: #ffffff !important;
+}
+.is-expanded-menu #section-percorsi .heading-block h2,
+.is-expanded-menu #section-percorsi .heading-block h2 span {
+	color: #3d6b35 !important;
 }
 
 .percorsi-bg {
