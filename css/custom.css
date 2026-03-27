@@ -223,10 +223,11 @@ em.not-italic {
 }
 
 .accordion-link {
-	color: #ffffff;
-	font-weight: 700;
-	text-decoration: underline;
-	text-underline-offset: 2px;
+	color: #ffffff !important;
+	font-weight: 700 !important;
+	text-decoration: none !important;
+	border-bottom: 1px solid #ffffff;
+	padding-bottom: 1px;
 }
 
 .accordion-link:hover {
