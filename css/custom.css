@@ -401,3 +401,28 @@ em.not-italic {
 		font-size: 2rem;
 	}
 }
+
+/* --- Privacy checkbox nel form contatti --- */
+#template-contactform .form-check {
+	padding-left: 1.75rem;
+}
+
+#template-contactform .form-check-input {
+	margin-top: 0.25rem;
+	cursor: pointer;
+}
+
+#template-contactform .form-check-input:checked {
+	background-color: var(--cnvs-themecolor);
+	border-color: var(--cnvs-themecolor);
+}
+
+#template-contactform .form-check-label {
+	font-size: 0.875rem;
+	color: #555;
+}
+
+#template-contactform .form-check-label a {
+	color: var(--cnvs-themecolor);
+	text-decoration: underline;
+}
