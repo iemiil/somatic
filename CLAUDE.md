@@ -46,9 +46,10 @@ css/fonts.css       # Override font (Poppins, Lato, PT Serif) come demo Canvas
 - Nel menu di navigazione: usare tag `<em>`, ovunque altro: `<span>` va bene
 
 ## Immagini del Cliente
-- `images/sfondo-home.jpg` - Sfondo hero
-- `images/sfondo-percorsi.jpg` - Sfondo sezione percorsi
-- `images/foto-bio.jpg` - Foto ritratto bio
+- `images/sfondo-home.webp` - Sfondo hero (1920×2560, WebP q82)
+- `images/sfondo-percorsi.webp` - Sfondo sezione percorsi (2560×1920, WebP q82)
+- `images/foto-bio.webp` - Foto ritratto bio (1800×2400, WebP q82)
+- Le foto del cliente vanno sempre ridimensionate (lato lungo max ~2560 px) e convertite in WebP prima di metterle nel sito: gli originali del telefono pesano diversi MB e rallentano il caricamento
 - Originali in: `C:\Users\EmilianoRustighini\OneDrive - WEB FACTORY SRL\Clienti OneDrive\ghiraldello.it\Grazioli - somatic\Immagini\`
 
 ## Sezioni
